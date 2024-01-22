@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive GitHub User Repositories</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <form  onsubmit="searchUser(event)" class="searchbar">
+            <input type="text" id="github-username" placeholder="Find a user repositry...">
+        <button type="submit">Search</button>
+        </form>
+
+        <div id="loader" class="loader"></div>
+        <div id="user-info" class="column hidden">
+        <div class="profile">
+            <div class="userImg">
+                <img src="" id="user-photo" alt="">
+            </div>
+            <div class="userDetails user-info" >
+                <h2 id="user-name">Mehul Gondaliya</h2>
+                <p  id="user-bio">Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, quia?</p>
+                <!-- <p>location : Jeptur</p>
+                <a href="" class="userTwitter">Twitter/mehulgondaliya</a> -->
+                <a href="" class="userGithub" id="github-link" target="_blank" >Github/dev-mehulgondaliya</a>
+            </div>
+        </div>
+        <div class="repos hidden" id="repos">
+            <div class="repo">
+                <h2>Ulrshortner project</h2>
+                <p>in this project use html,css,js</p>
+            </div>
+        </div>
+        <div class="pagination hidden" id="pagination">
+            <button id="prevButton" onclick="prevPage()">Prev</button>
+            <button id="currentPage">1</button>
+            <button  id="nextButton" onclick="nextPage()">Next</button>
+        </div>
+    </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
